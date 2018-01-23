@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import io.swagger.annotations.ApiModelProperty;
+
 @Entity
 @Table(name = "articles")
 public class Article implements Serializable {
@@ -17,12 +19,15 @@ public class Article implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "article_id")
+	@ApiModelProperty(notes="El identificador del artículo es generado por la base de datos")
 	private int articleId;
 
 	@Column(name = "title")
+	@ApiModelProperty(notes="El título del artículo")
 	private String title;
 
 	@Column(name = "category")
+	@ApiModelProperty(notes="La categoría del artículo")
 	private String category;
 
 	public int getArticleId() {
