@@ -14,20 +14,20 @@ import io.swagger.annotations.ApiModelProperty;
 @Entity
 @Table(name = "articles")
 public class Article implements Serializable {
-	
+
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "article_id")
-	@ApiModelProperty(notes="El identificador del artículo es generado por la base de datos")
+	@ApiModelProperty(notes = "El identificador del artículo es generado por la base de datos")
 	private int articleId;
 
 	@Column(name = "title")
-	@ApiModelProperty(notes="El título del artículo")
+	@ApiModelProperty(notes = "El título del artículo")
 	private String title;
 
 	@Column(name = "category")
-	@ApiModelProperty(notes="La categoría del artículo")
+	@ApiModelProperty(notes = "La categoría del artículo")
 	private String category;
 
 	public int getArticleId() {
